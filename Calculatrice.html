@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>Calculette</title>
+	<script language=JavaScript>
+		function additionner(var1, var2){
+			var result = parseInt(var1)+parseInt(var2);
+			document.getElementById("resultat").innerHTML = result;
+	}
+		function soustraire(var1, var2){
+			var result = var1-var2;
+			document.getElementById("resultat").innerHTML = result;
+	}
+		function multiplier(var1, var2){
+			var result = var1*var2;
+			document.getElementById("resultat").innerHTML = result;
+	}
+		function diviser(var1, var2){
+			var result = var1/var2;
+			document.getElementById("resultat").innerHTML = result;
+	}	
+	</script>
+<style>
+#conteneur{
+		position:absolute;
+		top:20px;
+		left:100px;
+		border:5px solid #FFFFFF;
+		text-align:center;/*centrage pourIE*/
+		
+	}
+	#formulaire{
+		text-align:center;
+	}
+	#resultat{
+		margin: auto;/*centrage pourFF*/		
+		width:100px;
+		height:30px;
+		border:1px solid green;
+		text-align: center;
+	}
+</head>
+</style>
+<body>
+	<div id="conteneur">
+		<div id="formulaire">
+			<form action="" method="">
+				<input type="text" name="val1" value="">
+				<input type="text" name="val2" value=""><br><br>
+				 <input type="button" value ="additionner"       onclick="additionner(val1.value,val2.value)"><br>
+				 <input type="button" value ="soustraire"   onclick="soustraire(val1.value,val2.value)"><br>
+				 <input type="button" value ="multiplier" onclick="multiplier(val1.value,val2.value)"><br>
+				 <input type="button" value ="diviser"       onclick="diviser(val1.value,val2.value)"><br><br>
+			</form>
+		</div>
+		<div id="resultat" ></div>
+	</div>
+</body>
+</html>
